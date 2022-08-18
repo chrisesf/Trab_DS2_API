@@ -13,6 +13,8 @@ app.use(express.urlencoded());
 
 app.post('/resultado', controller.buscar)
 
+app.get('/:url', controller.detalhar)
+
 app.get('/', (req, res) => {
     res.redirect('/inicial.html');
 });
